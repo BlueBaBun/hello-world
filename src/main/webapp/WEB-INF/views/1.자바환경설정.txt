@@ -1,0 +1,71 @@
+[사전 준비 사항]
+
+1.컴퓨터 ->마우스 우클릭->속성
+  -32비트 혹은 64비트확인
+  -컴퓨터명 확인(반드시 영문-오라클 설치시 오류가능성)
+2.제어판\프로그램\프로그램 및 기능
+   에서 JDK 설치 여부 확인
+
+
+1]자바개발환경구축
+1-1.JDK설치-www.oracle.com
+    downloads->popular downloads->java for developers
+    Java SE Downloads다운
+1-2. 환경변수 등록
+     컴퓨터->마우스 우클릭->속성->고급 시스템 설정
+     ->고급메뉴의 환경변수
+      변수:JAVA_HOME
+      값:JDK설치한 곳의 C:\Program Files\Java\jdk1.8.0_60
+      변수:JRE_HOME
+      값:JRE설치한 곳의 C:\Program Files\Java\jre1.8.0_60
+1-3.이클립스 다운-http://www.eclipse.org
+    Eclipse IDE for Java EE Developers 다운(※JAVA EE)
+
+2]JSP 및 서블릿 환경 구축(J2EE)
+2-1. 톰캣 다운-www.apache.org
+     하단의 Apache Project List에서
+     T의 Tomcat프로젝트 클릭(http://tomcat.apache.org/로 이동)
+     좌측의 Downloads메뉴에서 버전별 다운
+     Binary Distributions->zip파일 다운(압축버전)후 압축푼다.
+2-2.환경변수 등록 
+ 컴퓨터->마우스 우클릭->속성->고급 시스템 설정
+      ->고급메뉴의 환경변수
+       변수:CATARINA_HOME
+        값:톰캣 압축 푼 곳의 C:\Program Files\Java\apache-tomcat-8.0.33
+2-3.라이브러리 복사
+ 톰캣 압축 푼 곳의 C:\Program Files\Java\apache-tomcat-8.0.33\lib폴더에
+        있는 el-api.jar 및 jsp-api.jar 및 servlet-api.jar를
+        
+        이클립스의 WINDOWS->PREFERENCE메뉴의->JAVA의 INSTALL SHIELD메뉴 확인
+        후 복사
+         예]C:\Program Files\Java\jre1.8.0_60되있는 경우          
+            C:\Program Files\Java\jre1.8.0_60\lib\ext폴더에 3개의 라이브러리 복사
+
+            C:\Program Files\Java\jdk1.8.0_60되 있는 경우
+     C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext폴더에 3개의 라이브러리 복사
+3]스프링 개발환경 구축
+   -기존 이클립스트에 플러그인 설치
+    Help -> eclipse marketplace로 가서  find에 STS로 검색후 최신 번전 설치
+ 
+   -비 메이븐 시 Dynamic Web project로 생성:교안 참고해서 필요 라이브러들 다운받아서
+                 WEB-INF/lib폴더에 복사
+   -메이븐 시 Spring legacy Project->Spring MVC Project로 생성
+                 추가 라이브러리는 POM.XML에
+                 DEPENDENCY태그로 등록(http://mavenrepository.com에서 검색후 
+                 캐그 복사후 POM.XML에 붙여놓기)
+
+4] 오라클 설치
+-WWW.ORACLE.COM에서 다운로드
+1-4].JDBC를 사용하기위한 라이브러리 추가]
+11g인 경우: ojbdc6.jar파일을 오라클 사이트에서
+                 다운 받거나 오라클이 설치된 디렉토리의
+                 C:\app\Administrator\product\11.2.0\dbhome_1\jdbc\lib
+	         안에 있는 ojdbc6.jar를
+                이클립스의 WINDOW-PREPERENCES-JAVA-INSTALLED JRES메뉴에 설정된 디렉토리로 가서 EXT폴더로 복사
+
+
+                 
+
+
+
+
